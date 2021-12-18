@@ -12,6 +12,7 @@ AS新建工程
                会生成.git隐藏文件夹，.git文件夹也被称作版本库
     git add . 【作用：add代表需要追踪的文件[也就是添加到暂存区]，.代表所有文件】
     git commit 【作用：提交到本地仓库】
+    git commit 文件名【作用提交某一个文件，文件名需要加路径, git log来获取】
 
     git status 【查看所有文件状态，会列出以下几种】
         Changes to be committed: 【索引中变更的文件】
@@ -69,7 +70,10 @@ AS新建工程
         21b40e1 HEAD@{3}: reset: moving to 21b40e107145c442160256eb2b91f99055176186
 
     回滚到上一次提交commit,撤销提交记录，且保留当前本地变动
-    git reset --hard commit版本号  【git reflog 前面显示的版本号 - 08a37d3】
+    命令操作：
+        git reset --hard commit版本号  【git reflog 前面显示的版本号 - 08a37d3】
+    AS操作：
+        底部导航栏 - git - 右键上一次提交记录 - Undo commit
 
 
 1、工程添加到git，忽略对应文件
