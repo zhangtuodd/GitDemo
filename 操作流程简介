@@ -40,7 +40,14 @@ AS新建工程
     AS自带的stash没发生上述现象 ｜ 触发位置：toolbar - git
 
     取消索引 ｜ 删除相关
-        git reset HEAD <file> 【取消暂存区已经暂存的文件】
+        git reset HEAD <file>           【取消暂存区已经暂存的文件，只add未commit的文件】
+        git rm --cached readme1.txt     【删除readme1.txt的跟踪，并保留在本地。已经commit的文件】
+        git rm --f readme1.txt          【删除readme1.txt的跟踪，并且删除本地文件】
+
+        git checkout .idea/workspace.xml 【删除已经索引文件的修改变动】
+          AS对应操作：rollback
+
+
         【移除上一次提交】
         【移除上一次合并】
         【将多次提交合并到一次】
@@ -98,8 +105,8 @@ AS新建工程
     测试把多个commit提交记录合并一个commit。提交test-3
 
 
-    git check .idea/workspace.xml 【删除已经索引文件的修改变动】
-    AS对应操作：rollback
+    git忽略文件 【只需要在对应.gitignore文件添加规则即可，再把gitignore文件 索引+提交】
+        已经commit过的配置文件的可删除后在添加忽略即可
 
 1、工程添加到git，忽略对应文件
 2、使用命令来新建分支，执行相关命令
