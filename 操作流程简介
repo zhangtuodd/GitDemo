@@ -76,5 +76,9 @@ AS新建工程
         底部导航栏 - git - 右键上一次提交记录 - Undo commit
 
 
+    测试把多个commit提交记录合并一个commit。提交test-1
+    测试把多个commit提交记录合并一个commit。提交test-2
+    测试把多个commit提交记录合并一个commit。提交test-3
+
 1、工程添加到git，忽略对应文件
 2、使用命令来新建分支，执行相关命令
