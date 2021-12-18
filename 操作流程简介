@@ -1,2 +1,46 @@
+相关介绍：https://juejin.cn/post/6844903598522908686
+
+几个核心的存储区：
+    本地：【工作区】 ｜ git管理区【暂存区、本地仓库、远端仓库】
+
+
+操作步骤
+AS新建工程
+
+工作区操作命令：
+    git init 【作用：使用git管理项目。将项目初始化为git仓库，用来跟踪管理。只是确定项目可追踪，还没有真正添加任何可追踪文件】
+               会生成.git隐藏文件夹，.git文件夹也被称作版本库
+    git add . 【作用：add代表需要追踪的文件[也就是添加到暂存区]，.代表所有文件】
+    git commit 【作用：提交到本地仓库】
+
+    git status 【查看所有文件状态，会列出以下几种】
+        Changes to be committed: 【索引中变更的文件】
+          (use "git restore --staged <file>..." to unstage)
+                new file:   "\345\207\240\344\270\252\346\240\270\345\277\203\345\255\230\345\202\250\345\214\272.png"
+                new file:   "\346\240\270\345\277\203\345\255\230\345\202\250\345\214\272\347\273\206\350\212\202.png"
+
+        Changes not staged for commit:【未添加索引的文件 - 工作区已有文件修改】
+          (use "git add <file>..." to update what will be committed)
+          (use "git restore <file>..." to discard changes in working directory)
+                modified:   .idea/workspace.xml
+
+        Untracked files: 【未添加索引的文件 - 工作区新增文件】
+          (use "git add <file>..." to include in what will be committed)
+                .gradle/
+                .idea/GitDemo.iml
+
+    git diff 【作用：指定文件在工作区和暂存区上差异比较】
+
+    git stash 将当前本地代码交给git暂存起来，便于在一些情况下切换到其他分支开发，或者临时保存
+    git stash list  查看当前所有的储藏
+    git stash apply  应用最新的储藏
+    git stash apply stash@{2}  如果想应用更早的储藏
+    【注：有时候会发生无法暂存的情况，可能本地某个文件可能冲突，需要自己视情况去 提交 还是 revert 】
+    AS自带的stash没发生上述现象 ｜ 触发位置：toolbar - git
+
+    取消索引 ｜ 删除相关
+        git reset HEAD <file> 【取消暂存区已经暂存的文件】
+
+
 1、工程添加到git，忽略对应文件
 2、使用命令来新建分支，执行相关命令
