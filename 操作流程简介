@@ -40,6 +40,18 @@ AS新建工程
 
     取消索引 ｜ 删除相关
         git reset HEAD <file> 【取消暂存区已经暂存的文件】
+        【移除上一次提交】
+        【移除上一次合并】
+        【将多次提交合并到一次】
+        revert
+        reset
+        restore
+        check-pick
+        git rebase
+        git merge
+        git ignore
+
+    git commit --amend 【修改上次commit提交记录信息】
 
 
 1、工程添加到git，忽略对应文件
