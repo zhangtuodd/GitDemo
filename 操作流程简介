@@ -76,6 +76,23 @@ AS新建工程
         底部导航栏 - git - 右键上一次提交记录 - Undo commit
 
 
+    git多次提交合并为一次提交(如下：将3次提交记录合并为1次提交)
+        git rebase -i HEAD~3   执行完后出现以下窗口信息
+           pick 925e4c0 测试把多个commit提交记录合并一个commit。提交test-3
+           pick 86f832e 测试把多个commit提交记录合并一个commit。提交test-2
+           pick 336bbac 测试把多个commit提交记录合并一个commit。提交test-1
+        执行后会进入合并过程, 把除了第一个的pick其他全部改为s
+             pick 925e4c0 测试把多个commit提交记录合并一个commit。提交test-3
+             s 86f832e 测试把多个commit提交记录合并一个commit。提交test-2
+             s 336bbac 测试把多个commit提交记录合并一个commit。提交test-1
+        然后wq保存, 保存后会出现另一个界面, 合并修改这几次提交的commit信息
+             #This is a combination of 3 commits
+             #This is ths 1st commit message:
+                你的合并注释信息
+             #Please enter the commit message for your changes.....
+        一般都是把中间的注释干掉, 然后保留我之前的commit
+
+
     测试把多个commit提交记录合并一个commit。提交test-1
     测试把多个commit提交记录合并一个commit。提交test-2
     测试把多个commit提交记录合并一个commit。提交test-3
