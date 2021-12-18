@@ -53,6 +53,24 @@ AS新建工程
 
     git commit --amend 【修改上次commit提交记录信息】
 
+    git log 【显示所有提交过的版本信息】
+        commit 08a37d32ea96ddb834e9471407c96650aa55ab5b (HEAD -> master)
+        Author: zhangtuo <zhangtuodd@163.com>
+        Date:   Sun Dec 19 00:05:02 2021 +0800
+            提交信息备注
+
+    git log --pretty=oneline 【只显示显示版本号和提交时的备注信息】
+        08a37d32ea96ddb834e9471407c96650aa55ab5b  提交信息备注
+
+    git reflog 【可以查看所有分支的所有操作记录（包括已经被删除的 commit 记录和 reset 的操作）】
+        08a37d3 (HEAD -> master) HEAD@{0}: reset: moving to 08a37d3
+        21b40e1 HEAD@{1}: reset: moving to 21b40e107145c442160256eb2b91f99055176186
+        08a37d3 (HEAD -> master) HEAD@{2}: commit: git命令提交
+        21b40e1 HEAD@{3}: reset: moving to 21b40e107145c442160256eb2b91f99055176186
+
+    回滚到上一次提交commit,撤销提交记录，且保留当前本地变动
+    git reset --hard commit版本号  【git reflog 前面显示的版本号 - 08a37d3】
+
 
 1、工程添加到git，忽略对应文件
 2、使用命令来新建分支，执行相关命令
