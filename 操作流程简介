@@ -10,6 +10,14 @@ AS新建工程
 工作区操作命令：
     git init 【作用：使用git管理项目。将项目初始化为git仓库，用来跟踪管理。只是确定项目可追踪，还没有真正添加任何可追踪文件】
                会生成.git隐藏文件夹，.git文件夹也被称作版本库
+
+    git关联远端仓库【也可在add commit 之后关联】
+         remote add origin https://github.com/zhangtuodd/GitDemo.git
+    显示对应的克隆地址:
+         git remote -v  |  git remote --verbose  列出详细信息
+    本地仓库代码提交至远程仓库
+         git push -u origin master
+
     git add . 【作用：add代表需要追踪的文件[也就是添加到暂存区]，.代表所有文件】
     git commit 【作用：提交到本地仓库】
     git commit 文件名【作用提交某一个文件，文件名需要加路径, git log来获取】
@@ -103,6 +111,7 @@ AS新建工程
     测试把多个commit提交记录合并一个commit。提交test-1
     测试把多个commit提交记录合并一个commit。提交test-2
     测试把多个commit提交记录合并一个commit。提交test-3
+
 
 
     git忽略文件 【只需要在对应.gitignore文件添加规则即可，再把gitignore文件 索引+提交】
